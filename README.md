@@ -33,9 +33,11 @@ An intelligent rideshare aggregator prototype that compares options from platfor
    git clone [https://github.com/almaramirez5/compaRide.git](https://github.com/almaramirez5/compaRide.git)
 
 2. Navigate to the project directory
+   ```bash
     cd compaRide
 
 3. Install dependencies
+   ```bash
     npm install
 
 4. Set up your environment variables:
@@ -44,6 +46,7 @@ An intelligent rideshare aggregator prototype that compares options from platfor
     VITE_GEMINI_API_KEY="your_api_key_here"
 
 5. Start the development server:
+   ```bash
     npm run dev
 
 
