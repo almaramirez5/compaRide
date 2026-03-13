@@ -30,13 +30,16 @@ An intelligent rideshare aggregator prototype that compares options from platfor
 
 To address production-grade requirements and the feedback regarding security and scalability, the following architectural improvements are planned:
 
-* **API Security (The Proxy Pattern):** * *Current:* The Gemini API key is handled via client-side environment variables (`VITE_`). 
+* **API Security (The Proxy Pattern):** 
+  * *Current:* The Gemini API key is handled via client-side environment variables (`VITE_`). 
   * *Production Solution:* In a real-world scenario, I would implement a **Backend Proxy (Node.js/Express)**. The frontend would request data from my own server, which would then securely inject the API key and communicate with Google Gemini, preventing any exposure of secrets in the client-side bundle.
 
-* **Robustness & Prompt Engineering:** * *Current:* Uses detailed system prompts to guide the AI.
+* **Robustness & Prompt Engineering:**
+  * *Current:* Uses detailed system prompts to guide the AI.
   * *Production Solution:* To prevent "AI hallucinations" and ensure a 100% reliable UI, I would implement **Strict JSON Schema Enforcement** and a validation layer using **Zod**. This ensures the data structure matches the `RideOption` interface before it reaches the state.
 
-* **Testing Strategy:** * *Current:* Manual testing of the search and filter flows.
+* **Testing Strategy:**
+  * *Current:* Manual testing of the search and filter flows.
   * *Production Solution:* Implementation of **Vitest** for critical business logic (price/time calculations) and **Playwright** for End-to-End (E2E) testing of the complete user journey, from searching to the "ride completed" state.
 
 ## 🚀 How to Run Locally
