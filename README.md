@@ -1,4 +1,4 @@
-# 🚗 compaRide - AI-Powered Rideshare Aggregator MVP
+# compaRide - AI-Powered Rideshare Aggregator MVP
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
@@ -7,20 +7,20 @@
 
 An intelligent rideshare aggregator prototype that compares options from platforms like Uber, Cabify, and Bolt. Built as a Minimum Viable Product (MVP) to demonstrate UI/UX flows, dynamic data generation via AI, and complex frontend state management.
 
-## 🧠 The Engineering Challenge & Solution
+## The Engineering Challenge & Solution
 
 **The Problem:** Major rideshare companies heavily restrict their public APIs, making it difficult to build a real-time aggregator without enterprise partnerships. 
 
 **The Solution:** I designed an **Adapter Architecture** to decouple the UI from the data source. For this MVP, the backend services are powered by **Google's Gemini 3 Flash Preview AI**. The system processes user constraints (origin, destination, max price, max wait time) and utilizes **Structured Output (JSON)** to generate realistic, normalized payload responses, simulating a production-grade aggregator backend.
 
-## ✨ Key Features
+## Key Features
 
 * **AI-Powered Mock Backend:** Leverages `@google/genai` with specific system instructions to ensure dynamic ride options always respect user-defined filters.
 * **Dynamic Canvas Map:** Implements an HTML5 `<canvas>` API to simulate a live city grid. It draws paths and animates vehicle trajectories based on the selected provider's brand identity.
 * **State Machine Implementation:** Manages complex asynchronous UI states (idle -> searching -> connecting -> arriving -> in_progress -> completed) using React hooks and Framer Motion for a fluid experience.
 * **Modern UI/UX:** A mobile-first, clean interface styled with Tailwind CSS and Lucide Icons, focusing on scannability and accessibility.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** React 18, TypeScript, Vite
 * **Styling & UI:** Tailwind CSS, Lucide React, Framer Motion
@@ -42,7 +42,7 @@ To address production-grade requirements and the feedback regarding security and
   * *Current:* Manual testing of the search and filter flows.
   * *Production Solution:* Implementation of **Vitest** for critical business logic (price/time calculations) and **Playwright** for End-to-End (E2E) testing of the complete user journey, from searching to the "ride completed" state.
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 1. **Clone the repository:**
 
@@ -65,7 +65,7 @@ To address production-grade requirements and the feedback regarding security and
 
         npm run dev
 
-## 📈 Future Scalability
+## Future Scalability
 In a production environment, the AI mock generator would be replaced by **Node.js/FastAPI microservices** connecting to official APIs or web scrapers via a standard interface. The frontend is already designed using an **Adapter Pattern**, meaning the UI components won't need any changes to consume real-time production data.
 
 *Developed with 💙 as a portfolio project by a Computer Engineering student.*
